@@ -1,1 +1,296 @@
 /* You CSS goes in here */
+
+/* disabling text selection */
+
+body {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+  text {
+    pointer-events:none;
+  }
+  
+  
+  .container {
+    margin-top: 1%;
+  }
+  
+  .column {
+    text-align: center;
+  }
+  
+  #cy {
+    position: absolute;
+    width: 45%;
+    height: 50%;
+    margin: 5px;
+    top: 33%;
+    left: 28%;
+  
+    border: 0.2rem solid black;
+  }
+  
+  
+  .success-message {
+    font-size: 1.2rem;
+    color: rgb(31, 170, 31);
+    font-weight: bold;
+  }
+  
+  .failure-message {
+    font-size: 1.2rem;
+    color: rgb(228, 23, 23);
+    font-weight: bold;
+  }
+  
+  .highlight {
+    border:3px solid red;
+    box-shadow: 0 0 10px #719ECE;
+  }
+  
+  /* for dropping instruction box  */
+  
+  .instructions-box {
+    max-height: 50px;
+    overflow: hidden;
+    transition: all .5s ease;
+   
+  }
+  
+  .instructions-box.expand {
+    max-height: 400px;
+  }
+  
+  .v-instruction-container {
+    border: .2rem solid #97d23d;
+    justify-content: flex-start;
+  }
+  
+  #observations {
+    font-size: 1.25em;
+  }
+  
+  
+  .success-table{
+    font-size: 1rem;
+    color: rgb(31, 170, 31);
+    font-weight: bold;
+  }
+  
+  .failure-table{
+    font-size: 1rem;
+    color: rgb(228, 23, 23);
+    font-weight: bold;
+  }
+  
+  .bold-table{
+    font-weight: bold;
+  }
+  
+  .BoxArea{
+    display: grid;
+    row-gap: 10px;
+    background-color: rgb(76, 76, 248);
+    padding-bottom : 15px;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-right: 15px;
+    border-radius: 15px;
+    width: 400px;
+    height: 400px;
+  }
+
+  #c00{
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #c01{
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  #c02{
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  #c03{
+    grid-column: 4;
+    grid-row: 1;
+  }
+
+  #c10{
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #c11{
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  #c12{
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  #c13{
+    grid-column: 4;
+    grid-row: 2;
+  }
+
+  #c20{
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  #c21{
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  #c22{
+    grid-column: 3;
+    grid-row: 3;
+  }
+
+  #c23{
+    grid-column: 4;
+    grid-row: 3;
+  }
+
+  #c30{
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  #c31{
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  #c32{
+    grid-column: 3;
+    grid-row: 4;
+  }
+
+  #c33{
+    grid-column: 4;
+    grid-row: 4;
+  }
+
+  .boxyCel{
+    display: flex;
+    border: 5px solid rgb(67, 67, 67);
+    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: rgb(255, 255, 68);
+  }
+
+  .boxyCelRed{
+    display: flex;
+    border: 5px solid rgb(67, 67, 67);
+    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: rgb(255, 64, 64);
+  }
+
+  .boxyCel.Ydown {
+    transition: 0.25s;
+    transform: translateY(88px);
+  }
+
+  .boxyCelRed.Ydown {
+    transition: 0.25s;
+    transform: translateY(88px);
+    background-color: rgb(255, 255, 68);
+  }
+
+  .boxyCel.YdownRed {
+    transition: 0.25s;
+    transform: translateY(88px);
+    background-color: rgb(255, 64, 64);
+  }
+
+  .boxyCel.Yup {
+    transition: 0.25s;
+    transform: translateY(-88px);
+  }
+
+  .boxyCelRed.Yup {
+    transition: 0.25s;
+    transform: translateY(-88px);
+    background-color: rgb(255, 255, 68);
+  }
+
+  .boxyCel.YupRed {
+    transition: 0.25s;
+    transform: translateY(-88px);
+    background-color: rgb(255, 64, 64);
+  }
+
+  .boxyCel.Xleft {
+    transition: 0.25s;
+    transform: translateX(-86px);
+  }
+
+  .boxyCelRed.Xleft {
+    transition: 0.25s;
+    transform: translateX(-86px);
+    background-color: rgb(255, 255, 68);
+  }
+
+
+  .boxyCel.XleftRed {
+    transition: 0.25s;
+    transform: translateX(-86px);
+    background-color: rgb(255, 64, 64);
+  }
+
+  .boxyCel.Xright {
+    transition: 0.25s;
+    transform: translateX(86px);
+  }
+
+  .boxyCelRed.Xright {
+    transition: 0.25s;
+    transform: translateX(86px);
+    background-color: rgb(255, 255, 68);
+  }
+
+  .boxyCel.XrightRed {
+    transition: 0.25s;
+    transform: translateX(86px);
+    background-color: rgb(255, 64, 64);
+  }
+
+  .pointer-cursor{
+    cursor: pointer;
+  }
+
+  #hintTitle{
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(255, 64, 64);
+  }
+
+  #hintSteps{
+    font-size: 18px;
+  }
+
+  
