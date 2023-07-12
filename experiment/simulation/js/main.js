@@ -26,7 +26,7 @@ let step5=["-Move tile 13 to be in tile 9's final position.","-Move tile 9 to be
 let step6=["-Move tile 14 to the right of tile 9 so that it is in tile 10's final position.","-Move tile 10 to be directly to the right of tile 14.","-Rotate the three tiles in the middle two columns on the bottom two rows counter clockwise like a snake until tiles 14 and 10 are in their final positions."]
 let step7=["-Rotate tiles 11, 12, and 15 either clockwise or counter clockwise until they are all in the correct positions"]
 let start,b1,a1,discovered=[],inputArray2=[],index1Array=[],index2Array=[],index3Array=[],index4Array=[],index5Array=[],index6Array=[],index7Array=[];
-let j1,i1,i11,permutaionParity,permNumber,work,corr;
+let j1,i1,i11,permutaionParity,permNumber,work,corr,indexArrayMaker,hintnum;
 
 document.getElementById("moves").innerHTML=`No. of moves = ${moves}`;
 document.addEventListener('click', function(g) {
@@ -77,151 +77,51 @@ document.addEventListener('click', function(g) {
                 i11=0;
                     if(j1==0)
                     {
+                        function cyclemaker(indexArrayMaker){
                         for(i11=0;i11<1;){
-                        if(index1Array.includes(start)==true){
-                        if(index1Array.length>=2){
+                        if(indexArrayMaker.includes(start)==true){
+                        if(indexArrayMaker.length>=2){
                             j1=j1+1;
                             i1=0;
                             i11=1;
                         }
                         else{
-                            index1Array.length=0;
+                            indexArrayMaker.length=0;
                             i1=0;
                             i11=1;
                         }}
                         else{
-                            index1Array.push(start);
+                            indexArrayMaker.push(start);
                             discovered.push(start);
                             b1=(start-1)%4;
                             a1=Math.floor((start-1)/4);
                             start=parseInt(document.getElementById(`c${a1}${b1}`).innerHTML);
-                }}}
+                    }}}
+                cyclemaker(index1Array);}
                 else if(j1==1)
                     {
-                        for(i11=0;i11<1;){
-                        if(index2Array.includes(start)==true){
-                        if(index2Array.length>=2){
-                            j1=j1+1;
-                            i1=0;
-                            i11=1;
-                        }
-                        else{
-                            index2Array.length=0;
-                            i1=0;
-                            i11=1;
-                        }}
-                        else{
-                            index2Array.push(start);
-                            discovered.push(start);
-                            b1=(start-1)%4;
-                            a1=Math.floor((start-1)/4);
-                            start=parseInt(document.getElementById(`c${a1}${b1}`).innerHTML);
-                }}}
+                        cyclemaker(index2Array);
+                       }
                 else if(j1==2)
                     {
-                        for(i11=0;i11<1;){
-                        if(index3Array.includes(start)==true){
-                        if(index3Array.length>=2){
-                            j1=j1+1;
-                            i1=0;
-                            i11=1;
+                        cyclemaker(index3Array);
                         }
-                        else{
-                            index3Array.length=0;
-                            i1=0;
-                            i11=1;
-                        }}
-                        else{
-                            index3Array.push(start);
-                            discovered.push(start);
-                            b1=(start-1)%4;
-                            a1=Math.floor((start-1)/4);
-                            start=parseInt(document.getElementById(`c${a1}${b1}`).innerHTML);
-                }}}
                 else if(j1==3)
                     {
-                        for(i11=0;i11<1;){
-                        if(index4Array.includes(start)==true){
-                        if(index4Array.length>=2){
-                            j1=j1+1;
-                            i1=0;
-                            i11=1;
-                        }
-                        else{
-                            index4Array.length=0;
-                            i1=0;
-                            i11=1;
-                        }}
-                        else{
-                            index4Array.push(start);
-                            discovered.push(start);
-                            b1=(start-1)%4;
-                            a1=Math.floor((start-1)/4);
-                            start=parseInt(document.getElementById(`c${a1}${b1}`).innerHTML);
-                }}}
+                        cyclemaker(index4Array);
+                      }
                 else if(j1==4)
                     {
-                        for(i11=0;i11<1;){
-                        if(index5Array.includes(start)==true){
-                        if(index5Array.length>=2){
-                            j1=j1+1;
-                            i1=0;
-                            i11=1;
+                        cyclemaker(index5Array);
                         }
-                        else{
-                            index5Array.length=0;
-                            i1=0;
-                            i11=1;
-                        }}
-                        else{
-                            index5Array.push(start);
-                            discovered.push(start);
-                            b1=(start-1)%4;
-                            a1=Math.floor((start-1)/4);
-                            start=parseInt(document.getElementById(`c${a1}${b1}`).innerHTML); 
-                }}}
                 else if(j1==5)
                     {
-                        for(i11=0;i11<1;){
-                        if(index6Array.includes(start)==true){
-                        if(index6Array.length>=2){
-                            j1=j1+1;
-                            i1=0;
-                            i11=1;
-                        }
-                        else{
-                            index6Array.length=0;
-                            i1=0;
-                            i11=1;
-                        }}
-                        else{
-                            index6Array.push(start);
-                            discovered.push(start);
-                            b1=(start-1)%4;
-                            a1=Math.floor((start-1)/4);
-                            start=parseInt(document.getElementById(`c${a1}${b1}`).innerHTML); 
-                }}}
+                        cyclemaker(index6Array);
+                       }
                 else if(j1==6)
                     {
-                        for(i11=0;i11<1;){
-                        if(index7Array.includes(start)==true){
-                        if(index7Array.length>=2){
-                            j1=j1+1;
-                            i1=0;
-                            i11=1;
+                        cyclemaker(index7Array);
                         }
-                        else{
-                            index7Array.length=0;
-                            i1=0;
-                            i11=1;
-                        }}
-                        else{
-                            index7Array.push(start);
-                            discovered.push(start);
-                            b1=(start-1)%4;
-                            a1=Math.floor((start-1)/4);
-                            start=parseInt(document.getElementById(`c${a1}${b1}`).innerHTML); 
-                }}}
             }
             else{
                 i1=i1+1;
@@ -275,75 +175,36 @@ function e(){
     });
 
     if(ClickId=="Hints") {
-        if(document.getElementById("c00").innerHTML !=1 || document.getElementById("c01").innerHTML !=2){
+        function hintfunction(hintnum){
             document.getElementById("hintTitle").innerHTML="Hint";
             document.getElementById("hintSteps").innerHTML="";
-            for(hi=1;hi<=step1.length;){
+            for(hi=1;hi<=hintnum.length;){
             li=document.createElement('li');
-            li.innerHTML=step1[hi-1];
+            li.innerHTML=hintnum[hi-1];
             document.getElementById("hintSteps").appendChild(li); 
                 hi=hi+1;
             }
+        }
+        if(document.getElementById("c00").innerHTML !=1 || document.getElementById("c01").innerHTML !=2){
+          hintfunction(step1);
         }
         else if(document.getElementById("c02").innerHTML !=3 || document.getElementById("c01").innerHTML !=4){
-            document.getElementById("hintTitle").innerHTML="Hint";
-            document.getElementById("hintSteps").innerHTML="";
-            for(hi=1;hi<=step2.length;){
-            li=document.createElement('li');
-            li.innerHTML=step2[hi-1];
-            document.getElementById("hintSteps").appendChild(li); 
-                hi=hi+1;
-            }
+          hintfunction(step2);
         }
         else if(document.getElementById("c10").innerHTML !=5 || document.getElementById("c11").innerHTML !=6){
-            document.getElementById("hintTitle").innerHTML="Hint";
-            document.getElementById("hintSteps").innerHTML="";
-            for(hi=1;hi<=step3.length;){
-            li=document.createElement('li');
-            li.innerHTML=step3[hi-1];
-            document.getElementById("hintSteps").appendChild(li); 
-                hi=hi+1;
-            }
+          hintfunction(step3);
         }
         else if(document.getElementById("c12").innerHTML !=7 || document.getElementById("c13").innerHTML !=8){
-            document.getElementById("hintTitle").innerHTML="Hint";
-            document.getElementById("hintSteps").innerHTML="";
-            for(hi=1;hi<=step4.length;){
-            li=document.createElement('li');
-            li.innerHTML=step4[hi-1];
-            document.getElementById("hintSteps").appendChild(li); 
-                hi=hi+1;
-            }
+          hintfunction(step4);
         }
         else if(document.getElementById("c30").innerHTML !=13 || document.getElementById("c20").innerHTML !=9){
-            document.getElementById("hintTitle").innerHTML="Hint";
-            document.getElementById("hintSteps").innerHTML="";
-            for(hi=1;hi<=step5.length;){
-            li=document.createElement('li');
-            li.innerHTML=step5[hi-1];
-            document.getElementById("hintSteps").appendChild(li); 
-                hi=hi+1;
-            }
+          hintfunction(step5);
         }
         else if(document.getElementById("c31").innerHTML !=14 || document.getElementById("c21").innerHTML !=10){
-            document.getElementById("hintTitle").innerHTML="Hint";
-            document.getElementById("hintSteps").innerHTML="";
-            for(hi=1;hi<=step6.length;){
-            li=document.createElement('li');
-            li.innerHTML=step6[hi-1];
-            document.getElementById("hintSteps").appendChild(li); 
-                hi=hi+1;
-            }
+          hintfunction(step6);
         }
         else if(document.getElementById("c22").innerHTML !=11 || document.getElementById("c23").innerHTML !=12 || document.getElementById("c32").innerHTML !=15){
-            document.getElementById("hintTitle").innerHTML="Hint";
-            document.getElementById("hintSteps").innerHTML="";
-            for(hi=1;hi<=step7.length;){
-            li=document.createElement('li');
-            li.innerHTML=step7[hi-1];
-            document.getElementById("hintSteps").appendChild(li); 
-                hi=hi+1;
-            }
+          hintfunction(step7);
         }
         else{
             document.getElementById("hintTitle").innerHTML="Hint";
@@ -351,24 +212,28 @@ function e(){
             }
     }
 
+    function end(){
+        document.getElementById("c00").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c01").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c02").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c03").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c10").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c11").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c12").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c13").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c20").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c21").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c22").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c23").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c30").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c31").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c32").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("c33").style.backgroundColor="rgb(207,228,23)";
+    }
+
     if(cel1==1 && cel2==2 && cel3==3 && cel4==4 && cel5==5 && cel6==6 && cel7==7 && cel8==8 && cel9==9 &&
         cel10==10 && cel11==11 && cel12==12 && cel13==13 && cel14==14 && cel15==15){
-            document.getElementById("c00").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c01").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c02").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c03").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c10").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c11").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c12").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c13").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c20").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c21").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c22").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c23").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c30").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c31").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c32").style.backgroundColor="rgb(207,228,23)";
-            document.getElementById("c33").style.backgroundColor="rgb(207,228,23)";
+          end();
         }
         else{
             if(ClickId!=="c00" || ClickId!=="c01" || ClickId!=="c02" || ClickId!=="c03" || ClickId!=="c10" || ClickId!=="c11" || ClickId!=="c12"
@@ -527,22 +392,7 @@ cel16 = document.getElementById("c33").innerHTML;
 
 if(cel1==1 && cel2==2 && cel3==3 && cel4==4 && cel5==5 && cel6==6 && cel7==7 && cel8==8 && cel9==9 &&
     cel10==10 && cel11==11 && cel12==12 && cel13==13 && cel14==14 && cel15==15){
-        document.getElementById("c00").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c01").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c02").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c03").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c10").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c11").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c12").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c13").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c20").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c21").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c22").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c23").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c30").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c31").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c32").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c33").style.backgroundColor="rgb(207,228,23)";
+        end();
     }
     }};
 }}});
