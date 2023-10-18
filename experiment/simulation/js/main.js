@@ -32,6 +32,8 @@ document.getElementById("moves").innerHTML=`No. of moves = ${moves}`;
 document.addEventListener('click', function(g) {
     ClickId = g.target.id;
     if(ClickId=="Generate"){
+        moves=0;
+        document.getElementById("moves").innerHTML=`No. of moves = 0`;
         function populate(){
         document.getElementById("c33").innerHTML="";
         document.getElementById("c00").innerHTML="";
@@ -60,6 +62,39 @@ document.addEventListener('click', function(g) {
             i=i-1
         }
     }}
+    function reset(){
+        document.getElementById("c00").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c00").classList.add('boxyCel');
+        document.getElementById("c01").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c01").classList.add('boxyCel');
+        document.getElementById("c02").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c02").classList.add('boxyCel');
+        document.getElementById("c03").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c03").classList.add('boxyCel');
+        document.getElementById("c10").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c10").classList.add('boxyCel');
+        document.getElementById("c11").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c11").classList.add('boxyCel');
+        document.getElementById("c12").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c12").classList.add('boxyCel');
+        document.getElementById("c13").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c13").classList.add('boxyCel');
+        document.getElementById("c20").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c20").classList.add('boxyCel');
+        document.getElementById("c21").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c21").classList.add('boxyCel');
+        document.getElementById("c22").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c22").classList.add('boxyCel');
+        document.getElementById("c23").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c23").classList.add('boxyCel');
+        document.getElementById("c30").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c30").classList.add('boxyCel');
+        document.getElementById("c31").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c31").classList.add('boxyCel');
+        document.getElementById("c32").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+        document.getElementById("c32").classList.add('boxyCel');
+        document.getElementById("c33").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
+    }
         function permGroups(){
             j1=0;
             discovered.length=0;
@@ -131,6 +166,7 @@ document.addEventListener('click', function(g) {
        for(j11=0;j11<1;){
             populate();
             permGroups();
+            reset();
         permNumber=0;
 if(index1Array.length>1){
     permNumber=permNumber+index1Array.length-1;
@@ -213,6 +249,7 @@ function e(){
     }
 
     function end(){
+        console.log("end");
         document.getElementById("c00").style.backgroundColor="rgb(207,228,23)";
         document.getElementById("c01").style.backgroundColor="rgb(207,228,23)";
         document.getElementById("c02").style.backgroundColor="rgb(207,228,23)";
@@ -228,7 +265,6 @@ function e(){
         document.getElementById("c30").style.backgroundColor="rgb(207,228,23)";
         document.getElementById("c31").style.backgroundColor="rgb(207,228,23)";
         document.getElementById("c32").style.backgroundColor="rgb(207,228,23)";
-        document.getElementById("c33").style.backgroundColor="rgb(207,228,23)";
     }
 
     if(cel1==1 && cel2==2 && cel3==3 && cel4==4 && cel5==5 && cel6==6 && cel7==7 && cel8==8 && cel9==9 &&
