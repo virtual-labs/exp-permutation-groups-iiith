@@ -14,30 +14,46 @@ We attempt to solve an instance of the 15-puzzle here. Here a single step denote
 
 ![start](images/start.png)
 
+Fixing $1,2$
+
 $(16,15)\rightarrow(15,14)\rightarrow(14,13)\rightarrow(13,9)\rightarrow(9,5)\rightarrow(5,1)\rightarrow(1,2)\rightarrow(2,3)\rightarrow(3,7)\rightarrow(7,11)\rightarrow(11,10)\rightarrow(10,6)\rightarrow(6,7)\rightarrow(7,3)\rightarrow(3,2)\rightarrow(2,6)$
 
 ![1,2](images/1,2.png)
+
+Fixing $3,4$
 
 $(6,10)\rightarrow(10,9)\rightarrow(9,13)\rightarrow(13,14)\rightarrow(14,15)\rightarrow(15,11)\rightarrow(11,10)\rightarrow(10,6)\rightarrow(6,7)\rightarrow(7,11)\rightarrow(11,12)\rightarrow(12,8)\rightarrow(8,4)\rightarrow(4,3)\rightarrow(3,7)\rightarrow(7,6)\rightarrow(6,10)\rightarrow(10,14)\rightarrow(14,15)\rightarrow(15,11)\rightarrow(11,10)\rightarrow(10,6)\rightarrow(6,7)\rightarrow(7,11)\rightarrow(11,12)\rightarrow(12,8)\rightarrow(8,4)\rightarrow(4,3)\rightarrow(3,7)$
 
 ![3,4](images/3,4.png)
 
+Fixing $5,6$
+
 $(7,8)\rightarrow(8,12)\rightarrow(12,11)\rightarrow(11,10)\rightarrow(10,6)\rightarrow(6,7)\rightarrow(7,11)\rightarrow(11,10)\rightarrow(10,9)\rightarrow(9,5)\rightarrow(5,6)\rightarrow(6,7)\rightarrow(7,8)\rightarrow(8,12)\rightarrow(12,11)\rightarrow(11,10)\rightarrow(10,6)\rightarrow(6,7)$
 
 ![5,6](images/5,6.png)
+
+Fixing $7,8$
 
 $(7,11)\rightarrow(11,10)\rightarrow(10,14)\rightarrow(14,15)\rightarrow(15,11)\rightarrow(11,7)\rightarrow(7,8)\rightarrow(8,12)\rightarrow(12,16)\rightarrow(16,15)\rightarrow(15,11)\rightarrow(11,12)\rightarrow(12,16)\rightarrow(16,15)\rightarrow(15,11)\rightarrow(11,12)\rightarrow(12,8)\rightarrow(8,7)\rightarrow(7,11)\rightarrow(11,15)\rightarrow(15,16)\rightarrow(16,12)\rightarrow(12,11)\rightarrow(11,15)\rightarrow(15,16)\rightarrow(16,12)\rightarrow(12,8)\rightarrow(8,7)\rightarrow(7,11)$
 
 ![7,8](images/7,8.png)
 
+Fixing $9,13$
+
 $(11,10)\rightarrow(10,9)\rightarrow(9,13)\rightarrow(13,14)\rightarrow(14,10)\rightarrow(10,9)\rightarrow(9,13)\rightarrow(13,14)\rightarrow(14,10)\rightarrow(10,11)\rightarrow(11,12)\rightarrow(12,16)\rightarrow(16,15)\rightarrow(15,14)\rightarrow(14,10)\rightarrow(10,11)\rightarrow(11,15)\rightarrow(15,14)\rightarrow(14,13)\rightarrow(13,9)\rightarrow(9,10)$
 
 ![9,13](images/9,13.png)
+
+Fixing $10,14$
 
 $(10,11)\rightarrow(11,12)\rightarrow(12,16)\rightarrow(16,15)\rightarrow(15,14)\rightarrow(14,10)\rightarrow(10,11)\rightarrow(11,15)\rightarrow(15,14)\rightarrow(14,10)\rightarrow(10,11)$
 
 ![10,14](images/10,14.png)
 
+Fixing $11,12,15$
+
 $(11,15)\rightarrow(15,16)$
 
 ![complete](images/complete.png)
+
+Thus we have completed the 15-puzzle.
