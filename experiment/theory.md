@@ -39,34 +39,3 @@ Any permutation can have even or odd parity depending on the number of two cyles
 # Solvability
 
 A solvable instance of the puzzle is a permutation if we can bring the empty space to the bottom right of the grid and get an even parity permutation. The instances where the permutation is odd while the empty space is at the bottom can not be solved.
-
-# Example
-
-Let's take an example of 15-puzzle and solve it. We proceed going from top left to right and moving to the next row under the current one after clearing a row. our starting permutation is (14,6,4,7,10,2,9,11,15,13,3,5,1,12,8). We use the sequence of moves
-\graphicspath{ {./images/}}
-\includegraphics{clean.png}
- $(16,15)\rightarrow(15,14)\rightarrow(14,10)\rightarrow(10,9)\rightarrow(9,13)\rightarrow(13,14)\rightarrow(14,10)\rightarrow(10,6)\rightarrow(6,5)\rightarrow(5,9)\rightarrow(9,10)\rightarrow(10,6)\rightarrow(6,2)\rightarrow(2,1)\rightarrow(1,5)\rightarrow$.
- \includegraphics{1.png}
-Now that we have fixed 1, we move on to fixing 2 using the sequence of moves $(5,6)\rightarrow(6,7)\rightarrow(7,11)\rightarrow(11,15)\rightarrow(15,14)\rightarrow(14,10)\rightarrow(10,11)\rightarrow(11,7)\rightarrow(7,6)\rightarrow(6,10)\rightarrow(10,11)\rightarrow(11,7)\rightarrow(7,3)\rightarrow(3,2)\rightarrow(2,5)$.
-\includegraphics{2.png}
-Now that we have fixed 2, we move on to fixing 3,4 using the sequence of moves
-$(6,7)\rightarrow(7,8)\rightarrow(8,12)\rightarrow(12,16)\rightarrow(16,15)\rightarrow(15,11)\rightarrow(11,7)\rightarrow(7,8)\rightarrow(8,12)\rightarrow(12,11)\rightarrow(11,7)\rightarrow(7,3)\rightarrow(3,4)\rightarrow(4,8)$.
-\includegraphics{3,4.png}
-Now that we have fixed 3,4, we move on to fixing 5,6 using the sequence of moves
-$(8,7)\rightarrow(7,11)\rightarrow(11,15)\rightarrow(15,14)\rightarrow(14,10)\rightarrow(10,11)\rightarrow(11,7)\rightarrow(7,6)\rightarrow(6,10)\rightarrow(10,9)\rightarrow(9,5)\rightarrow(5,6)\rightarrow(6,10)\rightarrow(10,14)\rightarrow(14,15)\rightarrow(15,11)\rightarrow(11,7)\rightarrow(7,6)\rightarrow(6,10)$.
-\includegraphics{5,6.png}
-Now that we have fixed 5,6, we move on to fixing 7,8 using the sequence of moves
-$(10,11)\rightarrow(11,12)\rightarrow(12,8)\rightarrow(8,7)\rightarrow(7,11)\rightarrow(11,10)\rightarrow(10,14)\rightarrow(14,15)\rightarrow(15,16)\rightarrow(16,12)\rightarrow(12,8)\rightarrow(8,7)\rightarrow(7,11)$.
-\includegraphics{7,8.png}
-Now that we have fixed 7,8, we move on to fixing 9,13 using the sequence of moves
-$(11,12)\rightarrow(12,16)\rightarrow(16,15)\rightarrow(15,14)\rightarrow(14,10)\rightarrow(10,11)\rightarrow(11,12)\rightarrow(12,16)\rightarrow(16,15)\rightarrow(15,14)\rightarrow(14,10)\rightarrow(10,11)\rightarrow(11,15)\rightarrow(15,14)\rightarrow(14,13)\rightarrow(13,9)\rightarrow(9,10)$.
-\includegraphics{9,13.png}
-Now that we have fixed 9,13, we move on to fixing 10,14 using the sequence of moves
-$(10,11)\rightarrow(11,12)\rightarrow(12,16)\rightarrow(16,15)\rightarrow(15,14)\rightarrow(14,10)\rightarrow(10,11)\rightarrow(11,12)\rightarrow(12,16)\rightarrow(16,15)\rightarrow(15,14)\rightarrow(14,10)\rightarrow(10,11)\rightarrow(11,15)\rightarrow(15,14)\rightarrow(14,10)\rightarrow(10,11)$.
-\includegraphics{10,14.png}
-Now that we have fixed 10,14, we move on to fixing 11 using the move.
-$(11,15)$.
-\includegraphics{11.png}
-Then we end by fixing 15 using the move
-$(15,16)$.
-\includegraphics{done.png}
