@@ -1,1 +1,1 @@
-## Permutation Groups
+## Permutations and Permutation Groups

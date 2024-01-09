@@ -96,7 +96,7 @@ body {
   .BoxArea{
     display: grid;
     row-gap: 10px;
-    background-color: rgb(76, 76, 248);
+    background-color: rgb(206, 206, 252);
     padding-bottom : 15px;
     padding-left: 40px;
     padding-top: 40px;
