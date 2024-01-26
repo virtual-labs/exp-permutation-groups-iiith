@@ -15,7 +15,7 @@ let Aindex;
 let Avalue;
 let transition;
 let cel1,cel2,cel3,cel4,cel5,cel6,cel7,cel8,cel9,cel10,cel11,cel12,cel13,cel14,cel15,cel16;
-let p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16;
+let p=[];
 let moves=0;
 let hi;
 let li;
@@ -37,41 +37,41 @@ let test_perm;
 
 function permutation(){
         document.getElementById('current_permutation').innerHTML="";
-        p1=document.getElementById('c00').innerHTML;
-        if(p1==""){p1=16}
-        p2=document.getElementById('c01').innerHTML;
-        if(p2==""){p2=16}
-        p3=document.getElementById('c02').innerHTML;
-        if(p3==""){p3=16}
-        p4=document.getElementById('c03').innerHTML;
-        if(p4==""){p4=16}
-        p5=document.getElementById('c10').innerHTML;
-        if(p5==""){p5=16}
-        p6=document.getElementById('c11').innerHTML;
-        if(p6==""){p6=16}
-        p7=document.getElementById('c12').innerHTML;
-        if(p7==""){p7=16}
-        p8=document.getElementById('c13').innerHTML;
-        if(p8==""){p8=16}
-        p9=document.getElementById('c20').innerHTML;
-        if(p9==""){p9=16}
-        p10=document.getElementById('c21').innerHTML;
-        if(p10==""){p10=16}
-        p11=document.getElementById('c22').innerHTML;
-        if(p11==""){p11=16}
-        p12=document.getElementById('c23').innerHTML;
-        if(p12==""){p12=16}
-        p13=document.getElementById('c30').innerHTML;
-        if(p13==""){p13=16}
-        p14=document.getElementById('c31').innerHTML;
-        if(p14==""){p14=16}
-        p15=document.getElementById('c32').innerHTML;
-        if(p15==""){p15=16}
-        p16=document.getElementById('c33').innerHTML;
-        if(p16==""){p16=16}
-        document.getElementById('current_permutation').innerHTML=`(${p1},${p2},${p3},${p4},${p5},${p6},${p7},${p8},${p9},${p10},${p11},${p12},${p13},${p14},${p15},${p16})`;
+        p[0]=document.getElementById('c00').innerHTML;
+        if(p[0]==""){p[0]=16}
+        p[1]=document.getElementById('c01').innerHTML;
+        if(p[1]==""){p[1]=16}
+        p[2]=document.getElementById('c02').innerHTML;
+        if(p[2]==""){p[2]=16}
+        p[3]=document.getElementById('c03').innerHTML;
+        if(p[3]==""){p[3]=16}
+        p[4]=document.getElementById('c10').innerHTML;
+        if(p[4]==""){p[4]=16}
+        p[5]=document.getElementById('c11').innerHTML;
+        if(p[5]==""){p[5]=16}
+        p[6]=document.getElementById('c12').innerHTML;
+        if(p[6]==""){p[6]=16}
+        p[7]=document.getElementById('c13').innerHTML;
+        if(p[7]==""){p[7]=16}
+        p[8]=document.getElementById('c20').innerHTML;
+        if(p[8]==""){p[8]=16}
+        p[9]=document.getElementById('c21').innerHTML;
+        if(p[9]==""){p[9]=16}
+        p[10]=document.getElementById('c22').innerHTML;
+        if(p[10]==""){p[10]=16}
+        p[11]=document.getElementById('c23').innerHTML;
+        if(p[11]==""){p[11]=16}
+        p[12]=document.getElementById('c30').innerHTML;
+        if(p[12]==""){p[12]=16}
+        p[13]=document.getElementById('c31').innerHTML;
+        if(p[13]==""){p[13]=16}
+        p[14]=document.getElementById('c32').innerHTML;
+        if(p[14]==""){p[14]=16}
+        p[15]=document.getElementById('c33').innerHTML;
+        if(p[15]==""){p[15]=16}
+        document.getElementById('current_permutation').innerHTML=`(${p[0]},${p[1]},${p[2]},${p[3]},${p[4]},${p[5]},${p[6]},${p[7]},${p[8]},${p[9]},${p[10]},${p[11]},${p[12]},${p[13]},${p[14]},${p[15]})`;
         test_perm=document.getElementById('current_permutation').innerHTML;
-        console.log(p16)
+        console.log(p[15])
     
 }
 
@@ -81,6 +81,15 @@ function last_move(to,from){
 }
 
 function permutation_move(to,from){
+
+l0=p[to-1];
+console.log("lo"+l0)
+l1=p[from-1];
+console.log("li"+l1)
+p[to-1]=l1;
+p[from-1]=l0;
+document.getElementById('current_permutation').innerHTML=`(${p[0]},${p[1]},${p[2]},${p[3]},${p[4]},${p[5]},${p[6]},${p[7]},${p[8]},${p[9]},${p[10]},${p[11]},${p[12]},${p[13]},${p[14]},${p[15]})`;
+    /*
     temp_perm=document.getElementById('current_permutation').innerHTML;
     l0=0;
     for(l1=0;l1<to;){
@@ -121,7 +130,7 @@ function permutation_move(to,from){
         temp_perm=`${temp_perm.slice(0,l4+1)}${to_num}${temp_perm.slice(l5)}`
         document.getElementById('current_permutation').innerHTML="";
         document.getElementById('current_permutation').innerHTML=temp_perm;
-        
+        */
 }
 
 document.getElementById("moves").innerHTML=`No. of moves = ${moves}`;
