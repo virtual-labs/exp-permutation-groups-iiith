@@ -293,4 +293,30 @@ body {
     font-size: 18px;
   }
 
-  
+ #working-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ .permutation-and-move-wrapper {
+   text-align: left;
+   display: flex;
+   gap: 15px;
+   flex-direction: column;
+   margin-left: 10px;
+ }
+
+  #current_box{
+    background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  border: 5px solid rgb(255, 121, 121);
+  padding: 5px;
+}
+
+#last_move_box{
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  border: 5px solid rgb(255, 121, 121);
+  padding: 5px;
+}

@@ -20,7 +20,12 @@
 					<div id="instruction-title" class="v-collapsible is-size-5">Before you start:</div>
 					<div class="v-content" style="text-align: left; padding-left: 5%; padding-right: 5%;">
 						<ul style="list-style: disc;">
-							<li>Sample</li>
+							<li>15-puzzle is a type of Permutation puzzle that arranges the first sixteen natural numbers in a four by four grid with each number representing their numbered tile and sixteen being empty space.</li>
+							<li>Clicking on generate will create a random solvable 15 puzzle arrangement and its current permutation as displayed in the simulation.</li>
+							<li>To solve the 15-puzzle, you move tiles adajacent to the empty space, into the empty space by clicking on them. Each move represents a two cycle of the permutation which is multiplied to the current permutation</li>
+							<li>The goal of the puzzle is arrange the numbered tiles in increasing order. So the numbers increase left to right and then following the same oreder in the next row.</li>
+							<li>This should result in the current permutation finally being the identity permutation</li>
+							<li>If at any point you get stuck, the hint button will provide you with the next step to take in the algorithm to solve the puzzle.</li>
 						</ul>
 					</div>
 				</div>
@@ -51,6 +56,11 @@
 						<h2 id="c20" class="boxyCel">?</h2><h2 id="c21" class="boxyCel">?</h2><h2 id="c22" class="boxyCel">?</h2><h2 id="c23" class="boxyCel">?</h2>
 						<h2 id="c30" class="boxyCel">?</h2><h2 id="c31" class="boxyCel">?</h2><h2 id="c32" class="boxyCel">?</h2><h2 id="c33"></h2>
 					</div>
+					<div class="permutation-and-move-wrapper">
+						<div id="current_box">Current Permutation<div id="current_permutation">Click Generate</div></div>
+						<div id="last_move_box">Last Move<div id="last_move">Make the first move</div></div>
+					</div>
+
 				</div>
 			</div>
 		</div>

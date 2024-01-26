@@ -15,6 +15,7 @@ let Aindex;
 let Avalue;
 let transition;
 let cel1,cel2,cel3,cel4,cel5,cel6,cel7,cel8,cel9,cel10,cel11,cel12,cel13,cel14,cel15,cel16;
+let p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16;
 let moves=0;
 let hi;
 let li;
@@ -27,6 +28,101 @@ let step6=["-Move tile 14 to the right of tile 9 so that it is in tile 10's fina
 let step7=["-Rotate tiles 11, 12, and 15 either clockwise or counter clockwise until they are all in the correct positions"]
 let start,b1,a1,discovered=[],inputArray2=[],index1Array=[],index2Array=[],index3Array=[],index4Array=[],index5Array=[],index6Array=[],index7Array=[];
 let j1,i1,i11,permutaionParity,permNumber,work,corr,indexArrayMaker,hintnum;
+let to,from;
+let moveto,movefrom;
+let temp_perm;
+let l0,l1,l2,l3,l4,l5;
+let to_num,from_num;
+let test_perm;
+
+function permutation(){
+        document.getElementById('current_permutation').innerHTML="";
+        p1=document.getElementById('c00').innerHTML;
+        if(p1==""){p1=16}
+        p2=document.getElementById('c01').innerHTML;
+        if(p2==""){p2=16}
+        p3=document.getElementById('c02').innerHTML;
+        if(p3==""){p3=16}
+        p4=document.getElementById('c03').innerHTML;
+        if(p4==""){p4=16}
+        p5=document.getElementById('c10').innerHTML;
+        if(p5==""){p5=16}
+        p6=document.getElementById('c11').innerHTML;
+        if(p6==""){p6=16}
+        p7=document.getElementById('c12').innerHTML;
+        if(p7==""){p7=16}
+        p8=document.getElementById('c13').innerHTML;
+        if(p8==""){p8=16}
+        p9=document.getElementById('c20').innerHTML;
+        if(p9==""){p9=16}
+        p10=document.getElementById('c21').innerHTML;
+        if(p10==""){p10=16}
+        p11=document.getElementById('c22').innerHTML;
+        if(p11==""){p11=16}
+        p12=document.getElementById('c23').innerHTML;
+        if(p12==""){p12=16}
+        p13=document.getElementById('c30').innerHTML;
+        if(p13==""){p13=16}
+        p14=document.getElementById('c31').innerHTML;
+        if(p14==""){p14=16}
+        p15=document.getElementById('c32').innerHTML;
+        if(p15==""){p15=16}
+        p16=document.getElementById('c33').innerHTML;
+        if(p16==""){p16=16}
+        document.getElementById('current_permutation').innerHTML=`(${p1},${p2},${p3},${p4},${p5},${p6},${p7},${p8},${p9},${p10},${p11},${p12},${p13},${p14},${p15},${p16})`;
+        test_perm=document.getElementById('current_permutation').innerHTML;
+        console.log(p16)
+    
+}
+
+function last_move(to,from){
+    document.getElementById('last_move').innerHTML="";
+    document.getElementById('last_move').innerHTML=`(${to},${from})`;
+}
+
+function permutation_move(to,from){
+    temp_perm=document.getElementById('current_permutation').innerHTML;
+    l0=0;
+    for(l1=0;l1<to;){
+        if(temp_perm[l0]=="," || temp_perm[l0]==")"){
+            l1=l1+1}
+        if(l1==to-1 && (temp_perm[l0]=="," || temp_perm[l0]=="(")){
+            l2=l0
+            console.log("eto"+l1)
+            console.log("to0"+temp_perm[l0])
+        }
+        if(l1==to && (temp_perm[l0]=="," || temp_perm[l0]==")")){
+            l3=l0
+            console.log("to"+l1)
+            console.log("to1"+temp_perm[l0])
+        }
+        l0=l0+1;
+    }
+    l0=0;
+    for(l1=0;l1<from;){
+        if(temp_perm[l0]=="," || temp_perm[l0]==")"){
+            l1=l1+1}
+        if(l1==from-1 && (temp_perm[l0]=="," || temp_perm[l0]=="(")){
+            l4=l0
+        }
+        if(l1==from && (temp_perm[l0]=="," || temp_perm[l0]==")")){
+            l5=l0
+            console.log("from"+l1)
+        }
+        l0=l0+1;
+    }
+    console.log(l2+"yes"+l3);
+    console.log(l4+"yes"+l5);
+        to_num=temp_perm.slice(l2+1,l3)
+        from_num=temp_perm.slice(l4+1,l5)
+        console.log(to_num)
+        console.log(from_num)
+        temp_perm=`${temp_perm.slice(0,l2+1)}${from_num}${temp_perm.slice(l3)}`
+        temp_perm=`${temp_perm.slice(0,l4+1)}${to_num}${temp_perm.slice(l5)}`
+        document.getElementById('current_permutation').innerHTML="";
+        document.getElementById('current_permutation').innerHTML=temp_perm;
+        
+}
 
 document.getElementById("moves").innerHTML=`No. of moves = ${moves}`;
 document.addEventListener('click', function(g) {
@@ -61,7 +157,9 @@ document.addEventListener('click', function(g) {
             InputArray.splice(Aindex, 1);
             i=i-1
         }
-    }}
+    }
+permutation();
+}
     function reset(){
         document.getElementById("c00").classList.remove('Ydown','YdownRed','boxyCel','boxyCelRed');
         document.getElementById("c00").classList.add('boxyCel');
@@ -224,7 +322,7 @@ function e(){
         if(document.getElementById("c00").innerHTML !=1 || document.getElementById("c01").innerHTML !=2){
           hintfunction(step1);
         }
-        else if(document.getElementById("c02").innerHTML !=3 || document.getElementById("c01").innerHTML !=4){
+        else if(document.getElementById("c02").innerHTML !=3 || document.getElementById("c03").innerHTML !=4){
           hintfunction(step2);
         }
         else if(document.getElementById("c10").innerHTML !=5 || document.getElementById("c11").innerHTML !=6){
@@ -314,6 +412,10 @@ if(y+1<4){
             document.getElementById(`c${y+1}${x}`).classList.add('boxyCel');
         }
         });
+        movefrom=y*4+x+1;
+        moveto=(y+1)*4+x+1
+    last_move(moveto,movefrom);
+    permutation_move(moveto,movefrom);
     }
 }
 if(y-1>-1){
@@ -345,6 +447,10 @@ if(y-1>-1){
         document.getElementById(`c${y-1}${x}`).classList.add('boxyCel');
         }
     });
+    movefrom=y*4+x+1;
+        moveto=(y-1)*4+x+1
+    last_move(moveto,movefrom);
+    permutation_move(moveto,movefrom);
     }
 }
 if(x+1<4){
@@ -376,6 +482,10 @@ if(x+1<4){
         document.getElementById(`c${y}${x+1}`).classList.add('boxyCel');
         }
     });
+    movefrom=y*4+x+1;
+        moveto=(y)*4+x+2
+    last_move(moveto,movefrom);
+    permutation_move(moveto,movefrom);
     }
 }
 if(x-1>-1){
@@ -407,6 +517,10 @@ if(x-1>-1){
         document.getElementById(`c${y}${x-1}`).classList.add('boxyCel');
         }
     });
+    movefrom=y*4+x+1;
+        moveto=(y)*4+x
+    last_move(moveto,movefrom);
+    permutation_move(moveto,movefrom);
     }
 }
 cel1 = document.getElementById("c00").innerHTML;
