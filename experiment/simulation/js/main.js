@@ -140,6 +140,8 @@ document.addEventListener('click', function(g) {
         moves=0;
         document.getElementById("moves").innerHTML=`No. of moves = 0`;
         function populate(){
+        document.getElementById("hintTitle").innerHTML="";
+        document.getElementById("hintSteps").innerHTML="";
         document.getElementById("c33").innerHTML="";
         document.getElementById("c00").innerHTML="";
         document.getElementById("c01").innerHTML="";
@@ -372,6 +374,8 @@ function e(){
         document.getElementById("c30").style.backgroundColor="rgb(207,228,23)";
         document.getElementById("c31").style.backgroundColor="rgb(207,228,23)";
         document.getElementById("c32").style.backgroundColor="rgb(207,228,23)";
+        document.getElementById("hintTitle").innerHTML="";
+        document.getElementById("hintTitle").innerHTML=`You finished the puzzle in ${moves} moves.`;
     }
 
     if(cel1==1 && cel2==2 && cel3==3 && cel4==4 && cel5==5 && cel6==6 && cel7==7 && cel8==8 && cel9==9 &&
