@@ -1,4 +1,4 @@
-### Procedure
+# Procedure
 The experiment provides you with a 15-puzzle where your goal is to position its elements in ascending order.
 
 During the experiment:-

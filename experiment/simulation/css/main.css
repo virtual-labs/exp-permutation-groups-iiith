@@ -320,3 +320,21 @@ body {
   border: 5px solid rgb(255, 121, 121);
   padding: 5px;
 }
+
+.box{
+  border: 4px solid #97d23d;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+#Generate{
+  margin-bottom: 5px;
+}
+
+#current_permutation{
+  font-weight: bold;
+}
+
+#last_move{
+  font-weight: bold;
+}
