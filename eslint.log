@@ -1,0 +1,37 @@
+
+/home/runner/work/exp-permutation-groups-iiith/exp-permutation-groups-iiith/experiment/simulation/js/main.js
+   17:86  warning  'cel16' is assigned a value but never used       no-unused-vars
+   30:15  warning  'permutaionParity' is defined but never used     no-unused-vars
+   30:43  warning  'work' is defined but never used                 no-unused-vars
+   30:53  warning  'indexArrayMaker' is defined but never used      no-unused-vars
+   30:69  warning  'hintnum' is defined but never used              no-unused-vars
+   31:5   warning  'to' is defined but never used                   no-unused-vars
+   31:8   warning  'from' is defined but never used                 no-unused-vars
+   33:5   warning  'temp_perm' is defined but never used            no-unused-vars
+   34:11  warning  'l2' is defined but never used                   no-unused-vars
+   34:14  warning  'l3' is defined but never used                   no-unused-vars
+   34:17  warning  'l4' is defined but never used                   no-unused-vars
+   34:20  warning  'l5' is defined but never used                   no-unused-vars
+   35:5   warning  'to_num' is defined but never used               no-unused-vars
+   35:12  warning  'from_num' is defined but never used             no-unused-vars
+   36:5   warning  'test_perm' is assigned a value but never used   no-unused-vars
+  142:9   warning  Move function declaration to function body root  no-inner-declarations
+  174:5   warning  Move function declaration to function body root  no-inner-declarations
+  207:9   warning  Move function declaration to function body root  no-inner-declarations
+  224:25  warning  Move function declaration to function body root  no-inner-declarations
+  247:25  warning  'cyclemaker' is not defined                      no-undef
+  251:25  warning  'cyclemaker' is not defined                      no-undef
+  255:25  warning  'cyclemaker' is not defined                      no-undef
+  259:25  warning  'cyclemaker' is not defined                      no-undef
+  263:25  warning  'cyclemaker' is not defined                      no-undef
+  267:25  warning  'cyclemaker' is not defined                      no-undef
+  275:12  warning  'j11' is not defined                             no-undef
+  275:18  warning  'j11' is not defined                             no-undef
+  303:5   warning  'j11' is not defined                             no-undef
+  313:1   warning  Move function declaration to function body root  no-inner-declarations
+  323:9   warning  Move function declaration to function body root  no-inner-declarations
+  560:7   warning  Unnecessary semicolon                            no-extra-semi
+
+✖ 31 problems (0 errors, 31 warnings)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+

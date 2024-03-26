@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>Permutation Groups</title>
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
+		
+		
+		<!-- Add CSS at the head of HTML file -->
+		<link rel="stylesheet" href="./css/main.css">
+	</head>
+	<body>
+		<div class="columns is-centered">
+			<div class="column">
+				<div class="v-collapsible-instruction-container v-instruction-container">
+					<div id="instruction-title" class="v-collapsible is-size-5">Before you start:</div>
+					<div class="v-content" style="text-align: left; padding-left: 5%; padding-right: 5%;">
+						<ul style="list-style: disc;">
+							<li>15-puzzle is a type of Permutation puzzle that arranges the first sixteen natural numbers in a four by four grid with each number representing their numbered tile and sixteen being empty space.</li>
+							<li>Clicking on generate will create a random solvable 15 puzzle arrangement and its current permutation as displayed in the simulation.</li>
+							<li>To solve the 15-puzzle, you move tiles adajacent to the empty space, into the empty space by clicking on them. Each move represents a two cycle of the permutation which is multiplied to the current permutation</li>
+							<li>The goal of the puzzle is arrange the numbered tiles in increasing order. So the numbers increase left to right and then following the same oreder in the next row.</li>
+							<li>This should result in the current permutation finally being the identity permutation</li>
+							<li>If at any point you get stuck, the hint button will provide you with the next step to take in the algorithm to solve the puzzle.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+				
+		<div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap is-align-content-start">
+			<div class="column is-2-desktop is-12-tablet is-12-mobile">
+				<div class="v-datalist-container" style="height:40%;">
+					<div class="v-datalist-title">Controls</div>
+					<div class="v-datalist-row">
+			<div>
+				<button class="v-button" id="Generate">Generate</button>
+			</div>
+			<div>
+				<button class="v-button" id="Hints">Hint</button>
+			</div>
+					</div>
+				</div>
+			</div>	
+
+		<div class="column is-8-desktop is-12-tablet is-12-mobile">
+			<div id="circuit-board">
+				<div id="working-area" class="box">
+					<div class="BoxArea">
+						<h2 id="c00" class="boxyCel">?</h2><h2 id="c01" class="boxyCel">?</h2><h2 id="c02" class="boxyCel">?</h2><h2 id="c03" class="boxyCel">?</h2>
+						<h2 id="c10" class="boxyCel">?</h2><h2 id="c11" class="boxyCel">?</h2><h2 id="c12" class="boxyCel">?</h2><h2 id="c13" class="boxyCel">?</h2>
+						<h2 id="c20" class="boxyCel">?</h2><h2 id="c21" class="boxyCel">?</h2><h2 id="c22" class="boxyCel">?</h2><h2 id="c23" class="boxyCel">?</h2>
+						<h2 id="c30" class="boxyCel">?</h2><h2 id="c31" class="boxyCel">?</h2><h2 id="c32" class="boxyCel">?</h2><h2 id="c33"></h2>
+					</div>
+					<div class="permutation-and-move-wrapper">
+						<div id="current_box">Current Permutation<div id="current_permutation">Click Generate</div></div>
+						<div id="last_move_box">Last Move<div id="last_move">Make the first move</div></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+			<div class="column is-2-desktop is-4-tablet is-12-mobile">
+				<div class="v-datalist-container components-list">
+					<div class="v-datalist-title">Additional Information</div>
+					<div class="v-datalist-row">
+						<div id="observations"><h1 id="moves"></h1>
+						<h2 id="hintTitle"></h2>
+					<ul id="hintSteps"></ul></div>
+					</div>
+				</div>
+			</div>
+			</div>
+				
+		<!-- Your code goes here-->
+
+	<!-- Add JS at the bottom of HTML file --> 
+	<script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
+        <script src="./js/main.js"></script>
+<script src="../assets/js/iframeResize.js"></script></body>
+</html>
