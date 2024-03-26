@@ -2,7 +2,7 @@
 
 ## permutations 
 
-The permuatation of any set $S$ is a function $f:A\rightarrow A$ which is both one-to-one and onto. A permutation can be seen as an arrangement of the elements of a set in a specific order. An example of a permutation of some set $S=\{1,2,3,4\}$ and its permutation $(1,3,2,4)$.
+The permuatation of any set $S$ is a function $f:A\rightarrow A$ which is both one-to-one and onto. A permutation can be seen as an arrangement of the elements of a set in a specific order. An example of a permutation of some set $S=\{1,2,3,4\}$ and its permutation $(1,3,2,4)$. test stuff \((a+b)\) or (\a+b)\ or \(a+b)\ or $$(a+b)$$
 
 ## Product of permutations
 
