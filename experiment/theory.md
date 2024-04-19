@@ -30,10 +30,10 @@ Any cycle with length greater than two can be decomposed into 2-cycles which are
 
 Any permutation can have even or odd parity depending on the number of two cyles it is composed of. in our previous example where $c=(4,5,3,6,2,1)$ was written as $(1,6)(2,5)(3,3)(4,1)(5,2)(6,4)$, we find that it has $6$ 2-cycles which is even. Thus the parity of this permutation is even.
 
-## 15 puzzle
+# 15 puzzle
 
 15 puzzle is a puzzle game that has 16 spaces in the form of a 4x4 grid for 15 numbered tiles which can be moved around using the one remaining empty space in the puzzle grid. without getting into the specifics of solving the puzzle, we will go into the theory behind it. Though every instance of a 15 puzzle is a permuatation of the first 15 natural numbers, not all permutations of the first 15 natural numbers produce a solvable instance of the puzzle.
 
-### Solvability
+## Solvability
 
 A solvable instance of the puzzle is a permutation if we can bring the empty space to the bottom right of the grid and get an even parity permutation. The instances where the permutation is odd while the empty space is at the bottom can not be solved.
