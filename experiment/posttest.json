@@ -30,7 +30,7 @@
     {
       "question": "If ther are $a$ number of solvable instances of the 15-puzzle. How many of the 15-puzzle instances are unsolvable?",
       "answers": {
-        "a": "$\frac{a}{2}$",
+        "a": "$\\frac a 2$",
         "b": "$a$",
         "c": "$2a$",
         "d": "none of the above" 

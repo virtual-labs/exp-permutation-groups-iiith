@@ -4,10 +4,10 @@
     {
       "question": "Which of these is an injective but not a bijective function?",
       "answers": {
-        "a": "$f:A → A$ where $A=${$1,2,3,4,5$} and $f(a)=a$ for all $ain A$",
-        "b": "$f:A → B$ where $A=${$1,2,3$}, $B=${$1,2,3,4,5,6$} and $f(a)=2a$ for $ain A$",
-        "c": "$f:A → B$ where $A=${$1,2,3,4,5$}, $B={1}$ and $f(a)=1$ for all $ain A$",
-        "d": "$f:A → A$ where $A=${$1,2,3,4,5$} and $f(a)=1$ for all $f(a),ain A$"
+        "a": "$f:A → A$ where $A=${$1,2,3,4,5$} and $f(a)=a$ for all $a∈ A$",
+        "b": "$f:A → B$ where $A=${$1,2,3$}, $B=${$1,2,3,4,5,6$} and $f(a)=2a$ for $a∈ A$",
+        "c": "$f:A → B$ where $A=${$1,2,3,4,5$}, $B={1}$ and $f(a)=1$ for all $a∈ A$",
+        "d": "$f:A → A$ where $A=${$1,2,3,4,5$} and $f(a)=1$ for all $f(a),a∈ A$"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
@@ -15,10 +15,10 @@
     {
       "question": "Which of these is an surjective but not a bijective function?",
       "answers": {
-        "a": "$f:A → A$ where $A=${$1,2,3,4,5$} and $f(a)=a$ for all $ain A$",
-        "b": "$f:A → B$ where $A=${$1,2,3$}, $B=${$1,2,3,4,5,6$} and $f(a)=2a$ for $ain A$",
-        "c": "$f:A → B$ where $A=${$1,2,3,4,5$}, $B=${$1$} and $f(a)=1$ for all $ain A$",
-        "d": "$f:A → A$ where $A=${$1,2,3,4,5$} and $f(a)=1$ for all $f(a),ain A$"
+        "a": "$f:A → A$ where $A=${$1,2,3,4,5$} and $f(a)=a$ for all $a∈ A$",
+        "b": "$f:A → B$ where $A=${$1,2,3$}, $B=${$1,2,3,4,5,6$} and $f(a)=2a$ for $a∈ A$",
+        "c": "$f:A → B$ where $A=${$1,2,3,4,5$}, $B=${$1$} and $f(a)=1$ for all $a∈ A$",
+        "d": "$f:A → A$ where $A=${$1,2,3,4,5$} and $f(a)=1$ for all $f(a),a∈ A$"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -26,10 +26,10 @@
     {
       "question": "Which of these is a bijective function?",
       "answers": {
-        "a": "$f:A → A$ where $A=${$1,2,3,4,5$} and $f(a)=a$ for all $ain A$",
-        "b": "$f:A → B$ where $A=${$1,2,3$}, $B=${$1,2,3,4,5,6$} and $f(a)=2a$ for $ain A$",
-        "c": "$f:A → B$ where $A=${$1,2,3,4,5$}, $B=${$1$} and $f(a)=1$ for all $ain A$",
-        "d": "$f:A → A$ where $A=${$1,2,3,4,5$} and $f(a)=1$ for all $f(a),ain A$"
+        "a": "$f:A → A$ where $A=${$1,2,3,4,5$} and $f(a)=a$ for all $a∈ A$",
+        "b": "$f:A → B$ where $A=${$1,2,3$}, $B=${$1,2,3,4,5,6$} and $f(a)=2a$ for $a∈ A$",
+        "c": "$f:A → B$ where $A=${$1,2,3,4,5$}, $B=${$1$} and $f(a)=1$ for all $a∈ A$",
+        "d": "$f:A → A$ where $A=${$1,2,3,4,5$} and $f(a)=1$ for all $f(a),a∈ A$"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -40,7 +40,7 @@
         "a": "$(4,5,3,2,6,1,7,8,3)$",
         "b": "$(8,4,6,1,3)$",
         "c": "$(1,2,3,4,5,6,7,8)$",
-        "d": "none of the above"
+        "d": "none of the above" 
       },
       "explanations": {
         "c": "Permutation is the bijection of set to another set containing the same elements in any order."
