@@ -1,3 +1,1 @@
-# Aim
-
 This experiment aims to introduce you to the basics of Permutation Gruoups. We start by familiarising you cyclic permutations and parity of a permuation group. This information would be using when interacting with the 15-puzzle that is later provided to determine its solvability and understand its solution more in depth. we then discuss a few question based on permuation groups to solidify the information learnt.
