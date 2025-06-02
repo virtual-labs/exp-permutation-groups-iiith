@@ -1,6 +1,4 @@
-# References
-
-## Textbooks
+### Textbooks
 
 1. Dummit, D.S. and Foote, R.M., "Abstract Algebra", 3rd Edition, Wiley, 2003.
    - Chapter 1: Introduction to Groups
@@ -13,7 +11,7 @@
    - Chapter 5: Permutation Groups
    - Section 5.3: Cycle Notation
 
-## Online Resources
+### Online Resources
 
 1. Mulholland, J., "Permutation Puzzles", Simon Fraser University.
    - http://www.sfu.ca/~jtmulhol/math302/notes/permutation-puzzles-book.pdf
@@ -26,7 +24,7 @@
    - [Permutation Groups](https://brilliant.org/wiki/permutation-groups/)
    - [The 15 Puzzle](https://brilliant.org/wiki/15-puzzle/)
 
-## Video Lectures
+### Video Lectures
 
 1. NPTEL Course: "Abstract Algebra"
    - [Lecture on Permutation Groups](https://nptel.ac.in/courses/111106098)
@@ -36,7 +34,7 @@
    - Course: 18.701 Algebra I
    - [Lecture 3: Permutations and Combinations](https://ocw.mit.edu/courses/mathematics/18-701-algebra-i-fall-2010/)
 
-## Research Papers and Articles
+### Research Papers and Articles
 
 1. Johnson, W.W. and Story, W.E., "Notes on the '15' Puzzle", American Journal of Mathematics, Vol. 2, No. 4, 1879.
    - DOI: 10.2307/2369492
@@ -46,7 +44,7 @@
    - DOI: 10.2307/2589617
    - Modern mathematical analysis of the 15-puzzle
 
-## Interactive Learning Tools
+### Interactive Learning Tools
 
 1. Cut-the-Knot: Interactive Mathematics
    - [15-Puzzle: History and Solutions](https://www.cut-the-knot.org/pythagoras/fifteen.shtml)
