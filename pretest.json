@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Which of these is an injective but not a bijective function?",
+      "answers": {
+        "a": "$f:A → A$ where $A=\\{1,2,3,4,5\\}$ and $f(a)=a$ for all $a∈ A$",
+        "b": "$f:A → B$ where $A=\\{1,2,3\\}$, $B=\\{1,2,3,4,5,6\\}$ and $f(a)=2a$ for $a∈ A$",
+        "c": "$f:A → B$ where $A=\\{1,2,3,4,5\\}$, $B={1}$ and $f(a)=1$ for all $a∈ A$",
+        "d": "$f:A → A$ where $A=\\{1,2,3,4,5\\}$ and $f(a)=1$ for all $f(a),a∈ A$"
+      },
+      "explanations": {
+        "a": "Incorrect. This function is both injective and bijective as it maps each element to itself uniquely and covers the entire codomain.",
+        "b": "Correct! This function is injective (one-to-one) as each element maps to a unique value, but not bijective as it doesn't cover the entire codomain B.",
+        "c": "Incorrect. This function is neither injective nor bijective as multiple elements map to the same value 1.",
+        "d": "Incorrect. This function is neither injective nor bijective as all elements map to 1, violating the one-to-one property."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of these is an surjective but not a bijective function?",
+      "answers": {
+        "a": "$f:A → A$ where $A=\\{1,2,3,4,5\\} and $f(a)=a$ for all $a∈ A$",
+        "b": "$f:A → B$ where $A=\\{1,2,3\\}$, $B=\\{1,2,3,4,5,6\\}$ and $f(a)=2a$ for $a∈ A$",
+        "c": "$f:A → B$ where $A=\\{1,2,3,4,5\\}$, $B=\\{1\\}$ and $f(a)=1$ for all $a∈ A$",
+        "d": "$f:A → A$ where $A=\\{1,2,3,4,5\\}$ and $f(a)=1$ for all $f(a),a∈ A$"
+      },
+      "explanations": {
+        "a": "Incorrect. This function is both surjective and bijective as it maps each element to itself and covers all elements.",
+        "b": "Incorrect. This function is injective but not surjective as it doesn't cover all elements in set B.",
+        "c": "Correct! This function is surjective as it covers the entire codomain B (just {1}), but not bijective as it's not one-to-one.",
+        "d": "Incorrect. This function maps everything to 1, making it neither surjective for set A nor bijective."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of these is a bijective function?",
+      "answers": {
+        "a": "$f:A → A$ where $A=\\{1,2,3,4,5\\}$ and $f(a)=a$ for all $a∈ A$",
+        "b": "$f:A → B$ where $A=\\{$1,2,3\\}$, $B=\\{1,2,3,4,5,6\\}$ and $f(a)=2a$ for $a∈ A$",
+        "c": "$f:A → B$ where $A=\\{1,2,3,4,5\\}$, $B=\\{1\\}$ and $f(a)=1$ for all $a∈ A$",
+        "d": "$f:A → A$ where $A=\\{1,2,3,4,5\\}$ and $f(a)=1$ for all $f(a),a∈ A$"
+      },
+      "explanations": {
+        "a": "Correct! This function is bijective as it's both injective (one-to-one) and surjective (onto), mapping each element uniquely to itself.",
+        "b": "Incorrect. This function is injective but not surjective as it doesn't cover all elements in B.",
+        "c": "Incorrect. This function is surjective but not injective as multiple elements map to the same value.",
+        "d": "Incorrect. This function is neither injective nor surjective as all elements map to 1."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of these is a valid permutation of the set $S=\\{1,2,3,4,5,6,7,8\\}$?",
+      "answers": {
+        "a": "$(4,5,3,2,6,1,7,8,3)$",
+        "b": "$(8,4,6,1,3)$",
+        "c": "$(1,2,3,4,5,6,7,8)$",
+        "d": "none of the above" 
+      },
+      "explanations": {
+        "a": "Incorrect. This is not a valid permutation as 3 appears twice and some elements are missing.",
+        "b": "Incorrect. This is not a valid permutation as it's missing elements 2, 5, and 7.",
+        "c": "Correct! This is a valid permutation as it contains all elements exactly once in a different arrangement.",
+        "d": "Incorrect. Option c is a valid permutation."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the order of the permutation $(1,3,2)(4,5)$?",
+      "answers": {
+        "a": "3",
+        "b": "2",
+        "c": "6",
+        "d": "5"
+      },
+      "explanations": {
+        "a": "Incorrect. While (1,3,2) has order 3, we need to consider both cycles together.",
+        "b": "Incorrect. (4,5) has order 2, but we need to consider both cycles together.",
+        "c": "Correct! The order is the least common multiple (LCM) of the cycle lengths: LCM(3,2) = 6.",
+        "d": "Incorrect. 5 is not related to either cycle length or their combination."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How many 2-cycles are needed to represent the permutation $(1,4,3,2)$?",
+      "answers": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "explanations": {
+        "a": "Incorrect. Two 2-cycles are not sufficient to represent this 4-cycle.",
+        "b": "Correct! The permutation can be written as (1,2)(2,3)(3,4), requiring exactly 3 2-cycles.",
+        "c": "Incorrect. Using 4 2-cycles would be more than necessary.",
+        "d": "Incorrect. 5 2-cycles would be excessive and give a different permutation."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "If a permutation has cycle structure $(1,2)(3,4,5)(6,7,8,9)$, what is its order?",
+      "answers": {
+        "a": "12",
+        "b": "24",
+        "c": "4",
+        "d": "6"
+      },
+      "explanations": {
+        "a": "Correct! The order is LCM(2,3,4) = 12, as we need the least number that makes all cycles return to identity.",
+        "b": "Incorrect. 24 is larger than necessary for these cycles to return to identity.",
+        "c": "Incorrect. 4 would only account for the longest cycle length.",
+        "d": "Incorrect. 6 would only account for LCM(2,3) but ignores the 4-cycle."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Given permutations $α=(1,2,3)$ and $β=(2,3,4)$, what is $α∘β$?",
+      "answers": {
+        "a": "$(1,3,4,2)$",
+        "b": "$(1,2,4,3)$",
+        "c": "$(1,4,2,3)$",
+        "d": "$(1,2,3,4)$"
+      },
+      "explanations": {
+        "a": "Correct! Following the composition from right to left: β moves 2→3→4, then α moves 3→1, resulting in (1,3,4,2).",
+        "b": "Incorrect. This would be the result if we composed from left to right instead of right to left.",
+        "c": "Incorrect. This doesn't follow the correct composition order of the permutations.",
+        "d": "Incorrect. This is a simpler cycle that doesn't represent the actual composition."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the sign (parity) of the permutation $(1,2,3,4,5)(6,7)$?",
+      "answers": {
+        "a": "Even",
+        "b": "Odd",
+        "c": "Cannot be determined",
+        "d": "Always positive"
+      },
+      "explanations": {
+        "a": "Incorrect. A 5-cycle requires 4 2-cycles, and a 2-cycle is 1 more, totaling 5 2-cycles.",
+        "b": "Correct! A 5-cycle can be written as 4 2-cycles, and (6,7) adds 1 more, making 5 total 2-cycles, thus odd.",
+        "c": "Incorrect. The parity can be determined by counting the number of 2-cycles needed.",
+        "d": "Incorrect. Sign/parity is either even or odd, not positive or negative."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "In the 15-puzzle, why are some initial configurations impossible to solve?",
+      "answers": {
+        "a": "Because the grid is too small",
+        "b": "Because the empty space is in the wrong position",
+        "c": "Because of the parity of the permutation",
+        "d": "Because some numbers are too far from their target position"
+      },
+      "explanations": {
+        "a": "Incorrect. The size of the grid doesn't determine solvability.",
+        "b": "Incorrect. The empty space position alone doesn't determine solvability.",
+        "c": "Correct! The solvability depends on the parity of the permutation - if odd parity with empty space in certain positions, it's unsolvable.",
+        "d": "Incorrect. The distance of numbers from their target positions doesn't affect solvability."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    }
+  ]
+}
