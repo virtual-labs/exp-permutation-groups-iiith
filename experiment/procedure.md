@@ -1,71 +1,84 @@
-### Objective
-Your goal is to position all elements in the 15-puzzle in ascending order.
+## Overview
+The 15-puzzle is an interactive sliding puzzle that demonstrates key concepts in permutation groups. Your objective is to arrange numbered tiles (1-15) in ascending order within a 4×4 grid, leaving the bottom-right position empty.
 
-### Steps to Follow
+## Getting Started
 
-#### 1. Generate the Puzzle
-- Click on "Generate" to populate the grid with a random solvable 15-puzzle instance.
+### 1. Initialize Your Puzzle
+- **Generate New Puzzle**: Click the **"New Game"** button to create a randomly shuffled, solvable 15-puzzle instance
+- **Choose Difficulty**: Use the dropdown menu to select your preferred difficulty level:
+  - **Easy**: Minimal tile displacement, ideal for beginners
+  - **Medium**: Moderate complexity with multiple disruptions
+  - **Hard**: Maximum scrambling for experienced users
 
-#### 2. Moving Tiles
-- Click on tiles adjacent to the empty space to move them.
-- The clicked tile will move into the empty space.
+**Fun Fact**: Not all random arrangements of the 15-puzzle are solvable! The simulation automatically generates only solvable configurations based on permutation parity theory.
 
-#### 3. Solving the Puzzle
-- Arrange all numbered tiles in ascending order (1-15).
-- Start from the first row, moving left to right.
-- Continue row by row until the grid is complete.
-- The final position should have the empty space (16th position) after the number 15.
+### 2. Understanding the Interface
 
-#### 4. Getting Help
-- If you get stuck, click on "Hints" for guidance.
-- Hints will provide helpful suggestions without giving away the complete solution.
+#### Game Board
+- The puzzle consists of a 4×4 grid with numbered tiles 1-15 and one empty space
+- Tiles adjacent to the empty space can be moved by clicking on them
+- The empty space acts as your "working area" for tile manipulation
 
-### Solving Example
+#### Status Information Panel
+The interface displays several mathematical metrics in real-time:
+- **Move Count**: Total number of tile movements made
+- **Timer**: Elapsed time since starting the current puzzle
+- **Parity**: Mathematical property indicating whether the current permutation is even or odd
+- **Manhattan Distance**: Sum of distances each tile is from its correct position
+- **Total Inversions**: Number of tile pairs that are out of order
+- **Estimated Moves**: Heuristic calculation of minimum moves needed
 
-We attempt to solve an instance of the 15-puzzle here. Here a single step denoted by 2-cycles in the form $(a,b)$ indicates that the tile at position $b$ is moved to position $a$, thus creating empty space at $b$. Using multiplication with the 2-cycles at each step, we permute the initial permutation $(10,1,5,6,4,8,12,9,7,15,2,13,11,3,14,16)$ into the identity permutation for the set. We achieve this using the strategy provided in hints.
+### 3. Solving the Puzzle
 
-![start](images/start.png)
+#### Basic Movement Rules
+1. **Click to Move**: Click any tile adjacent to the empty space to slide it into the empty position
+2. **Valid Moves**: Only tiles directly above, below, left, or right of the empty space can be moved
+3. **Strategic Planning**: Each move creates a 2-cycle permutation, swapping the empty space with the selected tile
 
-#### Step 1: Fixing $1,2$
+#### Recommended Solving Strategy
+Follow this systematic approach for optimal results:
 
-$(16,15)\rightarrow(15,14)\rightarrow(14,13)\rightarrow(13,9)\rightarrow(9,5)\rightarrow(5,1)\rightarrow(1,2)\rightarrow(2,3)\rightarrow(3,7)\rightarrow(7,11)\rightarrow(11,10)\rightarrow(10,6)\rightarrow(6,7)\rightarrow(7,3)\rightarrow(3,2)\rightarrow(2,6)$
+**Phase 1: Establish the First Row**
+- Position tiles 1 and 2 in their correct locations (top-left corner)
+- Use the empty space strategically to maneuver tiles without disrupting already placed pieces
 
-![1,2](images/1,2.png)
+**Phase 2: Complete the Second Row**
+- Fix tiles 3 and 4 in the second row
+- Maintain the integrity of the first row while working
 
-#### Step 2: Fixing $3,4$
+**Phase 3: Column-by-Column Completion**
+- Work systematically through remaining positions
+- Use advanced techniques for the final 2×2 section
 
-$(6,10)\rightarrow(10,9)\rightarrow(9,13)\rightarrow(13,14)\rightarrow(14,15)\rightarrow(15,11)\rightarrow(11,10)\rightarrow(10,6)\rightarrow(6,7)\rightarrow(7,11)\rightarrow(11,12)\rightarrow(12,8)\rightarrow(8,4)\rightarrow(4,3)\rightarrow(3,7)\rightarrow(7,6)\rightarrow(6,10)\rightarrow(10,14)\rightarrow(14,15)\rightarrow(15,11)\rightarrow(11,10)\rightarrow(10,6)\rightarrow(6,7)\rightarrow(7,11)\rightarrow(11,12)\rightarrow(12,8)\rightarrow(8,4)\rightarrow(4,3)\rightarrow(3,7)$
+### 4. Assistance Features
 
-![3,4](images/3,4.png)
+#### Hint System
+- **Get Hint**: Click the **"Get Hint"** button to receive strategic advice
+- Hints provide directional guidance without revealing complete solutions
+- Use hints sparingly to maintain the learning experience
 
-#### Step 3: Fixing $5,6$
+#### Solution Demonstration
+- **Show Solution**: Click **"Show Solution"** to view an automated solving sequence
+- **Step Navigation**: Use **"Previous Step"** and **"Next Step"** buttons to analyze individual moves
+- **Solution Controls**: Monitor progress with the step counter and stop the demonstration at any time
 
-$(7,8)\rightarrow(8,12)\rightarrow(12,11)\rightarrow(11,10)\rightarrow(10,6)\rightarrow(6,7)\rightarrow(7,11)\rightarrow(11,10)\rightarrow(10,9)\rightarrow(9,5)\rightarrow(5,6)\rightarrow(6,7)\rightarrow(7,8)\rightarrow(8,12)\rightarrow(12,11)\rightarrow(11,10)\rightarrow(10,6)\rightarrow(6,7)$
+#### Move Management
+- **Undo**: Reverse your last move if you make a mistake
+- **Reset**: Return to the initial puzzle state to start over
+- **Move History**: Review your complete sequence of moves in the right panel
 
-![5,6](images/5,6.png)
+### 5. Educational Components
 
-#### Step 4: Fixing $7,8$
+#### Understanding Permutation Theory
+As you solve the puzzle, observe how:
+- Each move represents a permutation operation on the tile arrangement
+- The parity of the permutation remains constant throughout legal moves
+- Manhattan distance provides insight into the puzzle's "distance" from completion
 
-$(7,11)\rightarrow(11,10)\rightarrow(10,14)\rightarrow(14,15)\rightarrow(15,11)\rightarrow(11,7)\rightarrow(7,8)\rightarrow(8,12)\rightarrow(12,16)\rightarrow(16,15)\rightarrow(15,11)\rightarrow(11,12)\rightarrow(12,16)\rightarrow(16,15)\rightarrow(15,11)\rightarrow(11,12)\rightarrow(12,8)\rightarrow(8,7)\rightarrow(7,11)\rightarrow(11,15)\rightarrow(15,16)\rightarrow(16,12)\rightarrow(12,11)\rightarrow(11,15)\rightarrow(15,16)\rightarrow(16,12)\rightarrow(12,8)\rightarrow(8,7)\rightarrow(7,11)$
+#### Mathematical Insights
+- **Cycle Notation**: Each move can be expressed as a 2-cycle: $(a,b)$ indicating tile at position $b$ moves to position $a$
+- **Group Theory**: The set of all possible puzzle states forms a permutation group under the operation of legal moves
+- **Solvability**: A puzzle configuration is solvable if and only if it has even parity
 
-![7,8](images/7,8.png)
 
-#### Step 5: Fixing $9,13$
-
-$(11,10)\rightarrow(10,9)\rightarrow(9,13)\rightarrow(13,14)\rightarrow(14,10)\rightarrow(10,9)\rightarrow(9,13)\rightarrow(13,14)\rightarrow(14,10)\rightarrow(10,11)\rightarrow(11,12)\rightarrow(12,16)\rightarrow(16,15)\rightarrow(15,14)\rightarrow(14,10)\rightarrow(10,11)\rightarrow(11,15)\rightarrow(15,14)\rightarrow(14,13)\rightarrow(13,9)\rightarrow(9,10)$
-
-![9,13](images/9,13.png)
-
-#### Step 6: Fixing $10,14$
-
-$(10,11)\rightarrow(11,12)\rightarrow(12,16)\rightarrow(16,15)\rightarrow(15,14)\rightarrow(14,10)\rightarrow(10,11)\rightarrow(11,15)\rightarrow(15,14)\rightarrow(14,10)\rightarrow(10,11)$
-
-![10,14](images/10,14.png)
-
-#### Step 7: Fixing $11,12,15$
-
-$(11,15)\rightarrow(15,16)$
-
-![complete](images/complete.png)
-
-Thus we have completed the 15-puzzle.
+**Fun Fact**: The 15-puzzle has approximately 10.4 trillion possible configurations, but only half of them are solvable due to parity constraints!
