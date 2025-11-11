@@ -2,24 +2,24 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "For a set $X={1,2,3,4,5,6,7,8}$ and its permutation $Y=(4,2,1,3,6,5,8,7)$, which is the longest cyclic permutation in $Y$?",
+      "question": "For a set $X=\\{1,2,3,4,5,6,7,8\\}$ and a permutation with image sequence $[4,2,1,3,6,5,8,7]$ (where position $i$ maps to the $i$-th value), which is the longest cycle in this permutation?",
       "answers": {
-        "a": "$(4,2,1,3)$",
-        "b": "$(4,1,3)$",
-        "c": "$(8,7)$",
-        "d": "none of the above"
+        "a": "$(1,4,3)$",
+        "b": "$(5,6)$",
+        "c": "$(7,8)$",
+        "d": "$(2)$"
       },
       "explanations": {
-        "a": "Incorrect. This is not a valid cycle in the permutation as 2 is not part of the same cycle as 1,3 and 4.",
-        "b": "Correct! Following the permutation, 4→1→3→4 forms a cycle of length 3, which is the longest cycle in Y.",
-        "c": "Incorrect. While (8,7) is a valid cycle, it has length 2 which is smaller than the length 3 cycle (4,1,3).",
-        "d": "Incorrect. Option b represents a valid and longest cycle in the permutation."
+        "a": "Correct! In the permutation [4,2,1,3,6,5,8,7], we have 1→4, 4→3, 3→1, forming the cycle (1,4,3) with length 3, which is the longest.",
+        "b": "Incorrect. While (5,6) is a valid cycle (5→6, 6→5), it has length 2 which is shorter than the longest cycle.",
+        "c": "Incorrect. While (7,8) is a valid cycle (7→8, 8→7), it has length 2 which is shorter than the longest cycle.",
+        "d": "Incorrect. (2) is a 1-cycle (fixed point) as 2→2, which is the shortest possible cycle."
       },
-      "correctAnswer": "b",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "For a set $X={1,2,3,4,5,6,7,8}$ and its permutation $Y=(4,2,1,3,6,5,8,7)$, the number of cycles including 1-cycles in X are",
+      "question": "For a set $X=\\{1,2,3,4,5,6,7,8\\}$ and its permutation $Y=(4,2,1,3,6,5,8,7)$, the number of cycles including 1-cycles in $Y$ are",
       "answers": {
         "a": "$2$",
         "b": "$4$",
@@ -28,17 +28,17 @@
       },
       "explanations": {
         "a": "Incorrect. This underestimates the number of cycles - there are more than just 2 cycles in the permutation.",
-        "b": "Incorrect. While close, this misses one cycle in the counting of all cycles including 1-cycles.",
-        "c": "Correct! The cycles are: (4,1,3), (2), (6,5), (8,7), and (7,8), totaling 5 cycles.",
-        "d": "Incorrect. The permutation has exactly 5 cycles when counting all cycles including 1-cycles."
+        "b": "Correct! The cycles are: (1,4,3) or (4,1,3), (2), (5,6), and (7,8), totaling 4 cycles including the 1-cycle.",
+        "c": "Incorrect. This overcounts the cycles. The permutation has exactly 4 distinct cycles.",
+        "d": "Incorrect. The permutation has exactly 4 cycles when counting all cycles including 1-cycles."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "If ther are $a$ number of solvable instances of the 15-puzzle. How many of the 15-puzzle instances are unsolvable?",
+      "question": "If there are $a$ number of solvable instances of the 15-puzzle, how many of the 15-puzzle instances are unsolvable?",
       "answers": {
-        "a": "$\\frac a 2$",
+        "a": "$\\frac{a}{2}$",
         "b": "$a$",
         "c": "$2a$",
         "d": "none of the above" 
@@ -66,7 +66,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Let there be some permutation $x$ of the set $X$. We are given that $x^2=a$, $x^3=b$, $x^4=x$ and $x^5=a$ where $a,b,x$ are permutations of $X$. What is the order of $x$. ",
+      "question": "Let there be some permutation $x$ of the set $X$. We are given that $x^2=a$, $x^3=b$, $x^4=x$ and $x^5=a$ where $a,b,x$ are permutations of $X$. What is the order of $x$?",
       "answers": {
         "a": "$3$",
         "b": "$4$",
@@ -74,12 +74,12 @@
         "d": "none of the above" 
       },
       "explanations": {
-        "a": "Incorrect. If the order was 3, we would have x³=ε (identity), which contradicts x⁴=x.",
-        "b": "Correct! Since x⁴=x, we have x³=ε (identity), making 3 the order of x.",
+        "a": "Correct! Since x⁴=x, we have x³·x=x, which means x³=ε (identity permutation). Therefore, the order of x is 3. This is also consistent with x⁵=x²=a (since x⁵=x³·x²=ε·x²=x²).",
+        "b": "Incorrect. If the order was 4, we would have x⁴=ε (identity), not x⁴=x.",
         "c": "Incorrect. If the order was 5, x⁵ would equal ε (identity), not a.",
-        "d": "Incorrect. The order is clearly 4 as x⁴=x implies x³=ε."
+        "d": "Incorrect. The order is clearly 3 as x³=ε follows from x⁴=x."
       },
-      "correctAnswer": "b",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
@@ -134,18 +134,18 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "Given permutations $α=(1,2,3,4)$ and $β=(2,3,4,5)$, what is the order of $α∘β$?",
+      "question": "Given permutations $α=(1,2,3,4)$ and $β=(2,3,4,5)$ in cycle notation, what is the order of $α∘β$?",
       "answers": {
-        "a": "12",
-        "b": "15",
+        "a": "4",
+        "b": "5",
         "c": "20",
         "d": "6"
       },
       "explanations": {
-        "a": "Incorrect. The composition creates a cycle of length 6, not 12.",
-        "b": "Correct! The composition α∘β=(1,3,5,4,2) is a 5-cycle, and β moves 5, creating a permutation of order 15.",
-        "c": "Incorrect. 20 is too large for the order of this composition.",
-        "d": "Incorrect. 6 is too small as it doesn't account for all elements in the cycle structure."
+        "a": "Incorrect. The composition does not result in a 4-cycle.",
+        "b": "Correct! Computing α∘β: 1→β(1)=1→α(1)=2, 2→β(2)=3→α(3)=4, 3→β(3)=4→α(4)=1, 4→β(4)=5→α(5)=5, 5→β(5)=2→α(2)=3. This gives (1,2,4,5,3), a 5-cycle with order 5.",
+        "c": "Incorrect. 20 would be the LCM of 4 and 5, but the composition creates a single 5-cycle.",
+        "d": "Incorrect. 6 does not correspond to the cycle structure of the composition."
       },
       "correctAnswer": "b",
       "difficulty": "advanced"
@@ -176,12 +176,12 @@
         "d": "Cannot be determined without expanding"
       },
       "explanations": {
-        "a": "Incorrect. The composition results in an odd number of 2-cycles.",
-        "b": "Correct! Each 3-cycle contributes 2 2-cycles and each 2-cycle contributes 1, making the total odd after composition.",
-        "c": "Incorrect. The sign of a composition is independent of the order of composition.",
-        "d": "Incorrect. The sign can be determined by counting the 2-cycles in each permutation and their composition."
+        "a": "Correct! The first permutation (1,2,3)(4,5) has 2+1=3 transpositions (odd), and the second (2,3,4)(1,5) also has 2+1=3 transpositions (odd). The product of two odd permutations is even: odd × odd = even.",
+        "b": "Incorrect. While each individual permutation is odd, their composition is even.",
+        "c": "Incorrect. The sign of a composition equals the product of the signs, regardless of order.",
+        "d": "Incorrect. The sign can be determined by counting the 2-cycles in each permutation: both are odd, so their product is even."
       },
-      "correctAnswer": "b",
+      "correctAnswer": "a",
       "difficulty": "advanced"
     }
   ]

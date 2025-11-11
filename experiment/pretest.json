@@ -21,7 +21,7 @@
     {
       "question": "Which of these is an surjective but not a bijective function?",
       "answers": {
-        "a": "$f:A → A$ where $A=\\{1,2,3,4,5\\} and $f(a)=a$ for all $a∈ A$",
+        "a": "$f:A → A$ where $A=\\{1,2,3,4,5\\}$ and $f(a)=a$ for all $a∈ A$",
         "b": "$f:A → B$ where $A=\\{1,2,3\\}$, $B=\\{1,2,3,4,5,6\\}$ and $f(a)=2a$ for $a∈ A$",
         "c": "$f:A → B$ where $A=\\{1,2,3,4,5\\}$, $B=\\{1\\}$ and $f(a)=1$ for all $a∈ A$",
         "d": "$f:A → A$ where $A=\\{1,2,3,4,5\\}$ and $f(a)=1$ for all $f(a),a∈ A$"
@@ -39,7 +39,7 @@
       "question": "Which of these is a bijective function?",
       "answers": {
         "a": "$f:A → A$ where $A=\\{1,2,3,4,5\\}$ and $f(a)=a$ for all $a∈ A$",
-        "b": "$f:A → B$ where $A=\\{$1,2,3\\}$, $B=\\{1,2,3,4,5,6\\}$ and $f(a)=2a$ for $a∈ A$",
+        "b": "$f:A → B$ where $A=\\{1,2,3\\}$, $B=\\{1,2,3,4,5,6\\}$ and $f(a)=2a$ for $a∈ A$",
         "c": "$f:A → B$ where $A=\\{1,2,3,4,5\\}$, $B=\\{1\\}$ and $f(a)=1$ for all $a∈ A$",
         "d": "$f:A → A$ where $A=\\{1,2,3,4,5\\}$ and $f(a)=1$ for all $f(a),a∈ A$"
       },
@@ -121,18 +121,18 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "Given permutations $α=(1,2,3)$ and $β=(2,3,4)$, what is $α∘β$?",
+      "question": "Given permutations $α=(1,2,3)$ and $β=(2,3,4)$ in cycle notation, what is $α∘β$ (apply $β$ first, then $α$)?",
       "answers": {
-        "a": "$(1,3,4,2)$",
+        "a": "$(1,2)(3,4)$",
         "b": "$(1,2,4,3)$",
-        "c": "$(1,4,2,3)$",
+        "c": "$(1,3)(2,4)$",
         "d": "$(1,2,3,4)$"
       },
       "explanations": {
-        "a": "Correct! Following the composition from right to left: β moves 2→3→4, then α moves 3→1, resulting in (1,3,4,2).",
-        "b": "Incorrect. This would be the result if we composed from left to right instead of right to left.",
-        "c": "Incorrect. This doesn't follow the correct composition order of the permutations.",
-        "d": "Incorrect. This is a simpler cycle that doesn't represent the actual composition."
+        "a": "Correct! Apply β first: 1→1, 2→3, 3→4, 4→2. Then apply α: 1→2, 2→3, 3→1, 4→4. Composing: 1→1→2, 2→3→1, 3→4→4, 4→2→3. This gives 1→2, 2→1, 3→4, 4→3, which is (1,2)(3,4).",
+        "b": "Incorrect. This cycle doesn't match the correct composition of the two permutations.",
+        "c": "Incorrect. This would result from a different composition order or different permutations.",
+        "d": "Incorrect. This single 4-cycle doesn't represent the correct composition."
       },
       "correctAnswer": "a",
       "difficulty": "advanced"
