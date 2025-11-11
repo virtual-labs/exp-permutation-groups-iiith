@@ -1,0 +1,188 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "For a set $X=\\{1,2,3,4,5,6,7,8\\}$ and a permutation with image sequence $[4,2,1,3,6,5,8,7]$ (where position $i$ maps to the $i$-th value), which is the longest cycle in this permutation?",
+      "answers": {
+        "a": "$(1,4,3)$",
+        "b": "$(5,6)$",
+        "c": "$(7,8)$",
+        "d": "$(2)$"
+      },
+      "explanations": {
+        "a": "Correct! In the permutation [4,2,1,3,6,5,8,7], we have 1→4, 4→3, 3→1, forming the cycle (1,4,3) with length 3, which is the longest.",
+        "b": "Incorrect. While (5,6) is a valid cycle (5→6, 6→5), it has length 2 which is shorter than the longest cycle.",
+        "c": "Incorrect. While (7,8) is a valid cycle (7→8, 8→7), it has length 2 which is shorter than the longest cycle.",
+        "d": "Incorrect. (2) is a 1-cycle (fixed point) as 2→2, which is the shortest possible cycle."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "For a set $X=\\{1,2,3,4,5,6,7,8\\}$ and its permutation $Y=(4,2,1,3,6,5,8,7)$, the number of cycles including 1-cycles in $Y$ are",
+      "answers": {
+        "a": "$2$",
+        "b": "$4$",
+        "c": "$5$",
+        "d": "none of the above"
+      },
+      "explanations": {
+        "a": "Incorrect. This underestimates the number of cycles - there are more than just 2 cycles in the permutation.",
+        "b": "Correct! The cycles are: (1,4,3) or (4,1,3), (2), (5,6), and (7,8), totaling 4 cycles including the 1-cycle.",
+        "c": "Incorrect. This overcounts the cycles. The permutation has exactly 4 distinct cycles.",
+        "d": "Incorrect. The permutation has exactly 4 cycles when counting all cycles including 1-cycles."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If there are $a$ number of solvable instances of the 15-puzzle, how many of the 15-puzzle instances are unsolvable?",
+      "answers": {
+        "a": "$\\frac{a}{2}$",
+        "b": "$a$",
+        "c": "$2a$",
+        "d": "none of the above" 
+      },
+      "explanations": {
+        "a": "Incorrect. This would imply fewer unsolvable instances than solvable ones.",
+        "b": "Correct! There are equal numbers of even and odd parity permutations for any set, so the number of unsolvable instances equals the number of solvable ones.",
+        "c": "Incorrect. This would imply twice as many unsolvable instances as solvable ones.",
+        "d": "Incorrect. Option b is correct as there are equal numbers of solvable and unsolvable instances."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "For a set $X={1,2,3,4,5,6,7,8}$ and its permutation $Y=(4,2,1,3,6,5,8,7)$, the given permutation is odd.",
+      "answers": {
+        "a": "true",
+        "b": "false"
+      },
+      "explanations": {
+        "a": "Incorrect. When decomposed into 2-cycles, this permutation requires an even number of transpositions.",
+        "b": "Correct! The permutation can be written as a product of (4,1,3)(6,5)(8,7), which decomposes into an even number of 2-cycles."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Let there be some permutation $x$ of the set $X$. We are given that $x^2=a$, $x^3=b$, $x^4=x$ and $x^5=a$ where $a,b,x$ are permutations of $X$. What is the order of $x$?",
+      "answers": {
+        "a": "$3$",
+        "b": "$4$",
+        "c": "$5$",
+        "d": "none of the above" 
+      },
+      "explanations": {
+        "a": "Correct! Since x⁴=x, we have x³·x=x, which means x³=ε (identity permutation). Therefore, the order of x is 3. This is also consistent with x⁵=x²=a (since x⁵=x³·x²=ε·x²=x²).",
+        "b": "Incorrect. If the order was 4, we would have x⁴=ε (identity), not x⁴=x.",
+        "c": "Incorrect. If the order was 5, x⁵ would equal ε (identity), not a.",
+        "d": "Incorrect. The order is clearly 3 as x³=ε follows from x⁴=x."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the cycle decomposition of the permutation $(1,4,2)(3,5,6,7)$?",
+      "answers": {
+        "a": "$(1,2)(2,4)(3,5)(5,6)(6,7)$",
+        "b": "$(1,4)(4,2)(3,5)(5,6)(6,7)$",
+        "c": "$(1,2)(2,4)(3,7)(7,6)(6,5)$",
+        "d": "$(1,4)(4,2)(3,7)(7,6)(6,5)$"
+      },
+      "explanations": {
+        "a": "Incorrect. While this uses 2-cycles, it doesn't preserve the original permutation's action.",
+        "b": "Correct! This decomposition into 2-cycles correctly represents both cycles (1,4,2) and (3,5,6,7) while preserving their action.",
+        "c": "Incorrect. This reverses the order of the second cycle which changes the permutation.",
+        "d": "Incorrect. This mixes incorrect decompositions of both cycles."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the minimum number of 2-cycles needed to represent the permutation $(1,2,3,4,5)(6,7)$?",
+      "answers": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "6"
+      },
+      "explanations": {
+        "a": "Incorrect. A 5-cycle alone requires 4 2-cycles, and we still need to account for (6,7).",
+        "b": "Incorrect. This would only cover the 5-cycle but not the additional 2-cycle (6,7).",
+        "c": "Correct! We need 4 2-cycles for the 5-cycle plus 1 more for (6,7), totaling 5 2-cycles.",
+        "d": "Incorrect. This uses more 2-cycles than necessary to represent the permutation."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "If a permutation $p$ has cycle structure $(1,2,3)(4,5,6,7)$, what is $(p^2)^3$?",
+      "answers": {
+        "a": "Identity permutation",
+        "b": "$p^6$",
+        "c": "$p^3$",
+        "d": "$p^4$"
+      },
+      "explanations": {
+        "a": "Incorrect. $(p^2)^3 = p^6$ which is not the identity for this cycle structure.",
+        "b": "Correct! $(p^2)^3 = p^6$, and since the cycles have lengths 3 and 4, $p^{12}$ is the identity, so $p^6$ is not identity.",
+        "c": "Incorrect. This would be equivalent to $p^3$, not $(p^2)^3 = p^6$.",
+        "d": "Incorrect. This would be equivalent to $p^4$, not $(p^2)^3 = p^6$."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Given permutations $α=(1,2,3,4)$ and $β=(2,3,4,5)$ in cycle notation, what is the order of $α∘β$?",
+      "answers": {
+        "a": "4",
+        "b": "5",
+        "c": "20",
+        "d": "6"
+      },
+      "explanations": {
+        "a": "Incorrect. The composition does not result in a 4-cycle.",
+        "b": "Correct! Computing α∘β: 1→β(1)=1→α(1)=2, 2→β(2)=3→α(3)=4, 3→β(3)=4→α(4)=1, 4→β(4)=5→α(5)=5, 5→β(5)=2→α(2)=3. This gives (1,2,4,5,3), a 5-cycle with order 5.",
+        "c": "Incorrect. 20 would be the LCM of 4 and 5, but the composition creates a single 5-cycle.",
+        "d": "Incorrect. 6 does not correspond to the cycle structure of the composition."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "In a 15-puzzle, if the current state has odd parity and the empty space is in an even position (counting from top-left, row by row), what can you conclude?",
+      "answers": {
+        "a": "The puzzle is always solvable",
+        "b": "The puzzle is never solvable",
+        "c": "Solvability depends on the number of inversions",
+        "d": "Need more information to determine solvability"
+      },
+      "explanations": {
+        "a": "Incorrect. An odd parity with empty space in even position makes the puzzle unsolvable.",
+        "b": "Correct! When the empty space is in an even position, the permutation must have even parity to be solvable.",
+        "c": "Incorrect. The number of inversions determines the parity, which we already know is odd.",
+        "d": "Incorrect. The parity and empty space position are sufficient to determine solvability."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the sign of the composition $(1,2,3)(4,5) ∘ (2,3,4)(1,5)$?",
+      "answers": {
+        "a": "Even",
+        "b": "Odd",
+        "c": "Depends on the order of composition",
+        "d": "Cannot be determined without expanding"
+      },
+      "explanations": {
+        "a": "Correct! The first permutation (1,2,3)(4,5) has 2+1=3 transpositions (odd), and the second (2,3,4)(1,5) also has 2+1=3 transpositions (odd). The product of two odd permutations is even: odd × odd = even.",
+        "b": "Incorrect. While each individual permutation is odd, their composition is even.",
+        "c": "Incorrect. The sign of a composition equals the product of the signs, regardless of order.",
+        "d": "Incorrect. The sign can be determined by counting the 2-cycles in each permutation: both are odd, so their product is even."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    }
+  ]
+}
